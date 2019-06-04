@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>我的主页</title>
-	<meta name="description" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<meta name="description" content="范佳东的主页，学习阶段如有问题烦请指出。">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -137,7 +138,7 @@
 						<div class="item">
 							<div class="thumb">
 								<a href="img/first_big_item.jpg" data-lightbox="image-1"><div class="hover-effect">
-									<div class="hover-content">
+									<div class="hover-content" id="firstImg">
 										<h2>我的图片一</h2>
 										<p>Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
 									</div>
@@ -398,6 +399,11 @@ $(document).ready(function() {
 	$('#nav-toggle').on('click', function (event) {
 		event.preventDefault();
 		$('#main-nav').toggleClass("open");
+	});
+
+	$('#firstImg').on('click', function (){
+		// location.href='practice/迷你微信练习1/迷你微信练习1.html';
+		window.open('practice/迷你微信练习1/迷你微信练习1.html');
 	});
 });
 // scroll function
