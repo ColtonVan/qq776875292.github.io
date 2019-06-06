@@ -153,7 +153,7 @@
 						<div class="item">
 							<div class="thumb">
 								<a href="img/second_big_item.jpg" data-lightbox="image-1"><div class="hover-effect">
-									<div class="hover-content">
+									<div class="hover-content" id="secondImg">
 										<h2>我的图片二</h2>
 										<p>Donec eget dictum tellus. Curabitur a interdum diam. Nulla vestibulum porttitor porta.</p>
 									</div>
@@ -404,6 +404,9 @@ $(document).ready(function() {
 	$('#firstImg').on('click', function (){
 		// location.href='practice/迷你微信练习1/迷你微信练习1.html';
 		window.open('practice/迷你微信练习1/迷你微信练习1.html');
+	});
+	$('#secondImg').on('click', function (){
+		window.open('practice/随机生成方块/index.html');
 	});
 });
 // scroll function
