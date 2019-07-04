@@ -380,7 +380,7 @@
 <script src="js/main.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function() {
+$(function() {
 
 	
 
@@ -401,12 +401,15 @@ $(document).ready(function() {
 		$('#main-nav').toggleClass("open");
 	});
 
-	$('#firstImg').on('click', function (){
+	$('#4').find('a:eq(0)').on('click', function (){
 		// location.href='practice/迷你微信练习1/迷你微信练习1.html';
 		window.open('practice/迷你微信练习1/迷你微信练习1.html');
 	});
-	$('#secondImg').on('click', function (){
+	$('#4').find('a:eq(1)').on('click', function (){
 		window.open('practice/随机生成方块/index.html');
+	});
+	$('#4').find('a:eq(2)').on('click', function (){
+		window.open('practice/forecast/index.html');
 	});
 });
 // scroll function
