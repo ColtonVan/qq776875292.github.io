@@ -1,0 +1,220 @@
+.jd_layout{
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    background-color: #ccc;
+    height: 1000px;
+    margin: 0 auto;
+}
+.jd_search{
+    width: 100%;
+    max-width: 640px;
+    height: 40px;
+    // background-color: #e92322;
+    background: rgb(233,35,34,0);
+    position: fixed;
+    z-index: 1;
+}
+// .search_bg{
+//     width: 100%;
+//     height: 40px;
+//     background-color: #e92322;
+//     z-index: -1;
+//     position: absolute;
+//     opacity: 0;
+// }
+.jd_logo{
+    width: 56px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    background: url("../images/jd-sprites.png");
+    background-size: 200px 200px;
+    background-position: 0 -108px;
+}
+.jd_login{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 40px;
+    color: #fff;
+}
+.jd_searchBox{
+    width: 100%;
+    height: 100%;
+    padding-left: 76px;
+    padding-right: 50px;
+}
+.jd_searchBox input{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding-left: 30px;
+    color: #666;
+}
+.jd_searchBox::before{
+    content: "";
+    width: 27px;
+    height: 23px;
+    position: absolute;
+    background: url("../images/jd-sprites.png");
+    background-size: 200px 200px;
+    background-position: -56px -108px;
+    left: 80px;
+    top: 9px;
+}
+.jd_banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.jd_bannerImg{
+    width: 1000%;
+    // transform: translateX(-12.5%);
+    position: relative;
+    left: -100%;
+}
+.jd_bannerImg li{
+    width: 10%;
+    float: left;
+    font-size: 0;
+}
+.jd_bannerImg li img{
+    width: 100%;
+}
+.jd_bannerIndicator{
+    width: 118px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50px);
+}
+.jd_bannerIndicator li{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10px;
+}
+.jd_bannerIndicator li:first-of-type{
+    margin-left: 0;
+}
+.jd_bannerIndicator li.active{
+    background-color: #fff;
+}
+.jd_nav{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+.jd_nav li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-top: 5px;
+}
+.jd_nav li img{
+    width: 40px;
+}
+.jd_nav li p{
+    line-height: 25px;
+}
+.jd_product{
+    width: 100%;
+}
+.jd_productBox{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 1px 1px 2px #ccc;
+}
+.jd_productBox .jd_pTip{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    color: #666;
+}
+.jd_productBox .jd_pTip h3{
+    position: relative;
+    padding-left: 30px;
+}
+.jd_productBox .jd_pTip h3::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background-color: #e92322;
+    left: 22px;
+    top: 9px;
+}
+.jd_pContent a{
+    width: 50%;
+    display: block;
+}
+.jd_pContent a img{
+    width: 100%;
+    display: inline-block;
+}
+.b_left{
+    border-left: 1px solid #ccc;
+}
+.b_right{
+    border-right: 1px solid #ccc;
+}
+.b_bottom{
+    border-bottom: 1px solid #ccc;
+}
+.jd_sk .jd_pTip{
+    border-bottom: none;
+}
+.jd_sk .jd_pTip .jd_sk_icon{
+    width: 16px;
+    height: 20px;
+    margin-top: 3px;
+    background: url(../images/seckill-icon.png);
+    background-size: 16px 20px;
+}
+.jd_sk .jd_pTip .jd_sk_text{
+    color: #e92322;
+}
+.jd_sk .jd_pTip .jd_sk_time span{
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    line-height: 18px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.jd_sk .jd_pTip .jd_sk_time span:nth-last-of-type(3n){
+    background-color: transparent;
+    color: black;
+    width: 8px;
+}
+.jd_sk .jd_pContent{
+    padding: 20px;
+}
+.jd_sk .jd_pContent ul{
+    width: 100%;
+}
+.jd_sk .jd_pContent ul li{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
+.jd_sk .jd_pContent  ul  li a{
+    width: 60%;
+    display: inline-block;
+}
+// .jd_sk .jd_pContent  ul  li img{
+//     width: 100%;
+//     display: inline-block;
+//     transform: translateX(50%);
+// }

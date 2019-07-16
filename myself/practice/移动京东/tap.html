@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<div style="width:25%;height:300px;background-color:skyblue">
+
+	</div>
+	<script>
+		itcast.tap(document.querySelector('div'),function  () {
+			console.log('obj');
+		});
+
+		// var d = document.querySelector('div');
+		// var startX,startY,startTime,endTime,endX,endY;
+		// d.addEventListener('touchstart',function  (e) {
+		// 	if (e.targetTouches.length > 1) {
+		// 		return;
+		// 	}
+		// 	startTime = Date.now();
+		// 	startX = e.targetTouches[0].clientX;
+		// 	startY = e.targetTouches[0].clientY;
+		// });
+		// d.addEventListener('touchend',function (e) {
+		// 	endX = e.changedTouches[0].clientX;
+		// 	endY = e.changedTouches[0].clientY;
+		// 	endTime = Date.now();
+		// 	if(Math.abs(endX - startX) > 6 || Math.abs(endY - startY) > 6){
+		// 		return;
+		// 	}
+		// 	if(endTime - startTime < 150){
+		// 		console.log(endTime - startTime);
+		// 		console.log('msg');
+		// 	}
+		// });
+	</script>
+</body>
+</html>
