@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<style type="text/css" media="screen">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: skyblue;
+    }
+</style>
+<body>
+    <div class="div1" style="position: absolute;width: 50%;height: 50%;left: 50%;top: 50%;transform: translateX(-50%) translateY(-50%);">
+        <span style="text-align: center;display: block;font-size: 500%">0</span>
+        <br>
+        <button class="btn1" style="width: 320px;height: 320px;border-radius: 50%;cursor: pointer;background-color: green;position: absolute;left: 50%;top: 20%;transform: translate(-50%);font-size: 500%;color: #ccc;">开始</button>
+        <br>
+    </div>
+    <div class="bg" style="width: 70%;height: 30%;background-color: #ccc;position: absolute;left: 50%;top: 50%;transform: translateX(-50%) translateY(-50%);color: #FFFF66;text-align: center;line-height: 100%;font-size: 450%;box-shadow: 1px 1px 2px 2px #999999;cursor: default;display:none;">
+        result
+        <a class="cancel" style="cursor: pointer;position: absolute;right: 3%;color: white;font-size: 100%;top: -1%;">×</a>
+        <div class="cn" style="width: 90%;height: 80%;background-color: white;margin-left: 5%;margin-bottom: 8%;position: absolute;text-align: center;color: black;font-size: 60%;line-height: 200px;">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var sp = document.getElementsByClassName('div1')[0].getElementsByTagName('span')[0];
+        var Re = document.getElementsByClassName('cn')[0];
+        var btn1 = document.getElementsByClassName('btn1')[0];
+        var bg = document.getElementsByClassName('bg')[0];
+        var can = document.getElementsByClassName('cancel')[0];
+        var b = true;
+        var d,record,timerId;
+        btn1.onclick = function  () {
+            if(b){
+            b = false;
+            btn1.innerText = '停';
+            Re.innerHTML = '';
+            d = Date.now();
+            timerId = setInterval(function(){
+                nowTime = Date.now() - d;
+                var S = parseInt((nowTime)/1000);
+                var Ms = (nowTime)%1000;
+                sp.innerHTML = S+':'+Ms;
+            }, 1);
+            }else{
+                b = true;
+                bg.style.display = 'block';
+                clearInterval(timerId);
+                record = nowTime;
+                if(record == 1000*10){
+                    Re.innerHTML = ('You win!');
+                }else{
+                    Re.innerHTML = ('Unfortunately,Your result is '+sp.innerHTML);
+                }
+            }
+        }
+        can.onclick = function(){
+            bg.style.display = 'none';
+            btn1.innerText = '开始';
+            sp.innerHTML = 0;
+        }
+    </script>
+</body>
+</html>
