@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
           
             // increment slide number by n and keep within boundaries
             currSlide = Math.min(Math.max(0, currSlide + n), $slide.length-1);
-            
             var displacment = window.innerWidth*currSlide;
             // translate slides div across to appropriate slide
             $slides.css('transform', 'translateX(-' + displacment + 'px)');
@@ -28,7 +27,6 @@ jQuery(document).ready(function($) {
             // change active class on link
             $('nav a.active').removeClass('active');
             $($('a')[currSlide]).addClass('active');
-            
         }
       
         function bind() {
@@ -61,7 +59,6 @@ jQuery(document).ready(function($) {
         var currSlide = 0;
         var $slides = $('.slides');
         var $slide = $('.slide');
-      
         // give active class to first link
         $($('nav a')[0]).addClass('active');
         

@@ -171,13 +171,14 @@ nav em {
 	margin-left: 5px;
 	font-size: 14px;
 }
-
 nav ul li i {
 	width: 25px;
 }
 
 nav ul li a {
 	font-size: 18px;
+	display: block;
+	width: 100%;
 }
 
 nav .mini-logo {
@@ -211,7 +212,7 @@ nav ul {
     justify-content: space-around;
 }
 nav ul li {
-	margin: 25px 0px;
+	margin: 5px 20px 5px 0;
 }
 nav a, nav a:visited, nav a:active {
   color: #fff;
@@ -222,7 +223,7 @@ nav a {
 	letter-spacing: 0.5px;
   	-webkit-transition: color 2s, background 1s;
   	transition: color 2s, background 1s;
-  	padding: 20px 30px;
+  	padding: 20px 20px;
   	position: relative;
   	z-index: 0;
 }
@@ -430,14 +431,19 @@ nav a:hover::before {
 	margin-bottom: 20px;
 	margin-top: 0px;
 }
-
+@font-face{
+	font-family: myfont1;
+	src: url('../fonts/汉仪细行楷简.ttf')
+}
 .second-content p {
-	font-size: 13px;
+	font-family: myfont1;
+	font-size: 18px;
 	color: #fff;
 	letter-spacing: 0.5px;
 	font-weight: 300;
 	line-height: 24px;
 	margin-bottom: 30px;
+	text-indent: 2em;
 }
 
 .second-content a {
@@ -556,9 +562,11 @@ nav a:hover::before {
 .fourth-content .item .thumb {
 	position: relative;
 }
-
+.fourth-content img{
+	cursor: pointer;
+}
 .fourth-content .item .hover-effect {
-	text-align: left;
+	/* text-align: left;
 	position: absolute;
 	color: #fff;
 	background-color: rgba(0,0,0,0.95);
@@ -566,15 +574,15 @@ nav a:hover::before {
 	top: 0;
 	left: 0;
 	right: 0;
-	opacity: 0;
 	visibility: hidden;
-	transition: all 0.8s;
+	transition: all 0.8s; */
+	opacity: 0;
 }
 
-.fourth-content .item:hover .hover-effect {
+/* .fourth-content .item:hover .hover-effect {
 	opacity: 1;
 	visibility: visible;
-}
+} */
 
 .fourth-content .item .hover-effect .hover-content {
 	transform: translateY(-50%);
@@ -607,10 +615,60 @@ nav a:hover::before {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
-
-
-
-.fifth-content .container-fluid {
+.contain1{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+}
+.contain1 span{
+	height: 30px;
+	color: white;
+	font-size: 13px;
+	margin-right: 12px;
+	font-weight: bold;
+}
+.contain1 input[type='text']{
+	height: 30px;
+	background-color: rgba(82, 79, 79, 0.3);
+	color: white;
+	border: none;
+	width: 300px;
+	font-size: 12px;
+	margin-right: 15px;
+	text-align: center;
+}
+.contain1 input[type='text']:hover{
+	border: 3px #fff solid;
+	color: #fff;
+}
+.contain1 input[type='button']{
+	background-color: white;
+	color: #232323;
+	height: 30px;
+	width: 80px;
+	border-radius: 3px;
+	border: none;
+	border: 3px white solid;
+	font-size: 12px;
+}
+.contain1 input[type='button']:hover{
+	background-color: rgba(0,0,0,0);
+	color: white;
+}
+#href{
+	background-color: yellow;
+	border: 3px yellow solid;
+	font-size: 12px;
+	margin-left: 10px;
+}
+#href:hover{
+	background-color: rgba(0,0,0,0);
+	color: yellow;
+}
+/* .fifth-content .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -626,9 +684,9 @@ nav a:hover::before {
 
 .fifth-content #contact {
 	padding: 50px 50px 50px 50px;
-}
+} */
 
-.fifth-content input {
+/* .fifth-content input {
   border-radius: 0px;
   padding-left: 15px;
   font-size: 13px;
@@ -659,10 +717,10 @@ nav a:hover::before {
   max-height: 220px;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 25px;
-}
+  margin-bottom: 25px; 
+}*/
 
-.fifth-content button {
+/* .fifth-content button {
 	max-width: 100%;
 	width: 100%;
     display: inline-block;
@@ -681,7 +739,7 @@ nav a:hover::before {
 .fifth-content button:hover {
 	color: #232323;
 	background-color: #fff;
-}
+} */
 
 .footer .content {
 	left: 30%;
